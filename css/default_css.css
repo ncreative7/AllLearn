@@ -1,15 +1,13 @@
 * {
   box-sizing: border-box;
-  font-size: 1.5vh;
-}
-
-li {
-  text-overflow: ellipsis; /*말줄임표*/
+  font-size: 15px;
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: rgb(85, 85, 85);
 }
 
 p {
   overflow: hidden;
-} /*말줄임표set*/
+}
 
 #wrap {
   margin: 0 auto;
@@ -116,10 +114,18 @@ p {
 /*탭 컨텐츠 게시글 li 사이 간격 조절*/
 .tabs_content .content li {
   margin-bottom: 13px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .tabs_content .content li:last-child {
   margin: 0;
+}
+
+.tabs_content .content li a {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .tabs_content .content li a:hover {
@@ -328,6 +334,7 @@ p {
 
 #login_box_bottom span {
   margin-left: 0.5vh;
+  font-size: smaller;
 }
 
 #login_box_bottom div {
