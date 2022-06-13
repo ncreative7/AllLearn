@@ -1,0 +1,19 @@
+onclick="location.href='http://moonhouse.co.kr';"
+
+'전체보기' 버튼 외 다른 곳도 누르면 사라지기
+
+tabs_btn_left, tabs_btn_right
+좌우 이동버튼 this 해결법
+
+슬릭 슬라이드
+this 해결법
+
+[content_title] : 모든 페이지 컨텐츠 타이틀 // 선택마다 필터 다르게 줘야함
+list_title : 공지사항 게시글은 글씨 굵게 class 추가?
+
+view_material.html
+대댓글 버튼 this 사용 겹치지 않게
+
+shop.html
+상품 4번째 줄은 밑줄 없애기
+변수 활용 js

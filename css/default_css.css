@@ -1,0 +1,1276 @@
+* {
+  box-sizing: border-box;
+  font-size: 1.5vh;
+}
+
+li {
+  text-overflow: ellipsis; /*말줄임표*/
+}
+
+p {
+  overflow: hidden;
+} /*말줄임표set*/
+
+#wrap {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+#content_wrap {
+  max-width: 1000px;
+  height: 100%;
+  padding-top: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*슬릭 슬라이드 이미지 맞추기*/
+.slider-wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-wrap .content {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrap .content > .content_img,
+.content_img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  object-fit: cover;
+  width: 100%;
+}
+
+/*슬릭 슬라이더 좌우 arrow 이동*/
+#left_view #left_main_ban .slick-prev {
+  left: 0;
+  z-index: 1;
+}
+
+#left_view #left_main_ban .slick-next {
+  right: 0;
+  z-index: 1;
+}
+
+/*컨텐츠 왼쪽 랩*/
+#left_view {
+  width: 68%;
+  margin-right: 2%;
+  float: left;
+  overflow: hidden;
+}
+
+/*컨텐츠 오른쪽 랩*/
+#right_view {
+  width: 30%;
+  float: right;
+}
+
+/*컨텐츠 양쪽 가운데 랩*/
+#center_view {
+  width: 100%;
+  float: left;
+  height: 70px;
+}
+
+/*컨텐츠 전체 박스 스타일*/
+.content_box_style {
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  border: 1px solid #d6dee4;
+}
+
+/*----------------------------------------*/
+
+/*탭 제목*/
+.tabs_header {
+  width: 100%;
+  height: 35px;
+  background-color: #f0f1f3;
+}
+
+/*탭 컨텐츠*/
+.tabs_content {
+  padding: 15px;
+}
+
+.tabs_header h3 {
+  height: 35px;
+  line-height: 35px;
+  float: left;
+  cursor: pointer;
+  padding: 0 1vh;
+}
+
+.tabs_header h3.active {
+  background-color: #fff;
+}
+
+/*탭 컨텐츠 게시글 li 사이 간격 조절*/
+.tabs_content .content li {
+  margin-bottom: 13px;
+}
+
+.tabs_content .content li:last-child {
+  margin: 0;
+}
+
+.tabs_content .content li a:hover {
+  text-decoration: underline;
+  color: #ff9292;
+}
+
+/*탭 컨텐츠 이미지+제목*/
+.tabs_content .tabs_img {
+  display: flex; /*컨텐츠 4박스 정렬*/
+  gap: 0 20px;
+}
+
+.tabs_content .tabs_img a {
+  width: 23%;
+  height: 120px;
+  background-color: #d6dee4;
+  position: relative;
+}
+
+.tabs_content .tabs_img a h6 {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: #fff;
+  font-weight: lighter;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  opacity: 0.8;
+  white-space: normal;
+}
+
+/*탭 컨텐츠 이미지 박스 가로 2개씩 일 때*/
+.tabs_content .tabs_img2 {
+  display: flex; /*컨텐츠 2박스 정렬*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px; /*컨텐츠 사이 10px씩 벌리기*/
+  /* flex-flow : row wrap; */
+}
+
+.tabs_content .tabs_img2 a {
+  width: 47%;
+  height: 120px;
+  background-color: #d6dee4;
+}
+
+/*컨텐츠 게시글 제목*/
+.tabs_txt {
+  margin-top: 15px;
+}
+
+/*탭 좌우 버튼*/
+.tabs_btn_wrap {
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.tabs_btn_wrap i {
+  padding: 2px 5px;
+}
+
+.tabs_btn_left,
+.tabs_btn_right,
+.tabs_btn_plus {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #d6dee4;
+  cursor: pointer;
+}
+
+.tabs_btn_plus i {
+  padding: 2px 3px;
+}
+
+.tabs_btn_left {
+  margin-right: 3px;
+}
+
+.tabs_btn_left:hover,
+.tabs_btn_right:hover {
+  background-color: #d6dee4;
+}
+
+/*----------오른쪽 영역----------*/
+
+/*로그인*/
+#login_wrap {
+  width: 100%;
+  padding: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/*로그인 후 프로필*/
+.profile_img {
+  float: left;
+  overflow: hidden;
+}
+
+.profile_img a {
+  width: 50px;
+  height: 50px;
+  background: url("../img/profile.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #d6dee4;
+  display: block; /*이미지가 보이게*/
+}
+
+.profile_txt {
+  width: 80%;
+  overflow: hidden;
+  float: right;
+}
+
+.profile_nickname {
+  font-weight: bold;
+}
+
+.profile_txt table {
+  float: right;
+}
+
+.profile_txt td {
+  border: 1px solid #d6dee4;
+  padding: 4px;
+}
+
+.logout_button {
+  display: block;
+  background-color: transparent;
+  float: right;
+  margin-top: 7px;
+}
+
+.logout_button:hover {
+  text-decoration: underline;
+}
+
+/*내 정보 밑 메뉴 영역*/
+#profile_bottom {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*내 정보 밑 메뉴 영역 li*/
+#profile_bottom .profile_menu {
+  float: left;
+  padding: 0 5px;
+}
+
+#profile_bottom ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  line-height: 20px;
+  background-color: #d6dee4;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0 5px;
+}
+
+#profile_bottom ul li:hover {
+  text-decoration: underline;
+}
+
+/*로그인 전 form*/
+#login_wrap fieldset {
+  width: 100%;
+  position: relative;
+}
+
+.login_txt {
+  width: 195px;
+  border: 1px solid #d6dee4;
+  line-height: 20px;
+  padding: 2px 5px;
+}
+
+.login_txt[name="pw"] {
+  display: block;
+  border-top: none;
+}
+
+.login_btn {
+  width: 80px;
+  height: 51px;
+  padding: 10px;
+  background: #f0f1f3;
+  border: 1px solid #d6dee4;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#login_box_bottom {
+  margin-top: 10px;
+  /*회원가입 span은 html 스타일 속성 적용*/
+}
+
+#login_box_bottom span {
+  margin-left: 0.5vh;
+}
+
+#login_box_bottom div {
+  float: right;
+}
+
+#login_box_bottom div span:hover {
+  text-decoration: underline;
+}
+
+.guest_check_btn {
+  background-color: #f0f1f3;
+  border-radius: 10px;
+  padding: 3px 5px;
+}
+
+.guest_check_btn:hover {
+  background-color: #dddddd;
+}
+
+/*액션 버튼*/
+#action_btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+#action_btn button {
+  display: block;
+  margin: 15px 0;
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+  border-radius: 45px;
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 30%);
+  outline: none;
+  border: none;
+}
+
+.btn_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*---------회원가입 페이지----------*/
+
+#register_wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*로고/회원가입 타이틀*/
+#register_wrap #register_header {
+  width: 100%;
+  border-bottom: 1px solid #d6dee4;
+  text-align: center;
+}
+
+#register_header .logo {
+  margin: 20px 0;
+}
+
+.page_title {
+  padding: 13px 0 20px 0;
+  color: gray;
+}
+
+/*회원가입 컨텐츠*/
+#register_content {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+/*회원가입 절차*/
+#register_process {
+  display: flex;
+}
+
+#register_process span {
+  width: 33.5%;
+  padding: 10px 15px;
+  border: 1px solid #d6dee4;
+  background-color: #fff;
+  color: gray;
+  text-align: center;
+}
+
+#register_form {
+  float: left;
+  max-width: 650px;
+}
+
+/*회원가입 폼 랩(약관, 정보입력)*/
+#register_terms {
+  width: 100%;
+}
+
+/*회원가입 약관 타이틀*/
+#register_terms h4 {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #d6dee4;
+  background-color: #fff;
+  text-align: center;
+}
+
+/*회원가입 약관 랩*/
+#register_terms #terms_item {
+  padding: 20px;
+}
+
+/*회원가입 약관 전체 동의*/
+#register_terms #terms_item .term_all {
+  padding: 10px 0 20px 0;
+}
+
+/*회원가입 체크박스 커스텀*/
+#terms_item [type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid #afafaf;
+  border-radius: 3px;
+  outline: 0;
+}
+
+#terms_item [type="checkbox"]:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  background-color: #f87b7b;
+}
+
+/*회원가입 약관 타이틀*/
+#register_terms #terms_item .term_title {
+  margin-top: 20px;
+}
+
+/*회원가입 약관 더보기*/
+#register_terms #terms_item .term_more_btn {
+  background-color: #fff;
+  float: right;
+}
+
+/*회원가입 약관 보이는 영역(Y스크롤)*/
+#register_terms #terms_item .term_area {
+  overflow-y: scroll; /*오른쪽 세로 스크롤*/
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  border: 1px solid #d6dee4;
+  /* display: none; */
+}
+
+/*회원가입 약관 보이기*/
+.term_area.active {
+  display: block;
+}
+
+/*회원가입 정보입력 부분 시작*/
+#register_info {
+  width: 450px;
+  margin: 30px auto 150px auto;
+  position: relative;
+}
+
+/*회원가입 정보입력 각 영역*/
+.register_info_box {
+  margin-top: 10px;
+}
+
+.register_info hr {
+  margin: 20px 0;
+}
+
+/*회원가입 정보입력 타이틀 span*/
+.register_info_box span {
+  width: 100px;
+  text-align: right;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.register_info_box input[type="text"],
+.register_info_box input[type="password"],
+.register_info_box select {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+/*휴대전화 인증번호 입력창 앞부분 여백 두기*/
+.register_info_box input[name="phone_check"] {
+  margin-left: 115px;
+}
+
+.register_info_button {
+  background-color: #d6dee4;
+  height: 30px;
+  padding: 0 8px;
+}
+
+.register_info_button[name="register_button"] {
+  padding: 0 40px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*----------------------------------------------*/
+
+/*패스워드 찾기 영역*/
+
+#search_wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#search_content {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#search_content .logo {
+  margin: 15px 0;
+}
+
+#search_content .logo a {
+  width: 180px;
+  height: 40px;
+}
+
+#search_content p {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+#search_content form {
+  max-width: 550px;
+  display: inline-block;
+}
+
+/*비밀번호 찾기 이메일 입력*/
+#search_content input {
+  padding: 10px;
+  width: 450px;
+  border: 1px solid #d6dee4;
+  border-radius: 7px;
+  display: block;
+  margin-top: 20px;
+}
+
+/*비밀번호 찾기 버튼*/
+#search_content button {
+  background-color: #ff9292;
+  padding: 10px;
+  width: 450px;
+  border: none;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+#search_content button:hover {
+  background-color: #f87b7b;
+}
+
+/*------------------------------------------------*/
+/*학습자료 영역*/
+
+/*[content_box] : 컨텐츠 영역*/
+#content_box {
+  overflow: hidden;
+}
+
+/*모든 페이지 컨텐츠 타이틀*/
+.content_title {
+  padding: 10px;
+  border-bottom: 1px solid #d6dee4;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+/*셀렉트 테두리 없애기*/
+.content_title select {
+  border: none;
+  font-weight: bold;
+}
+
+/*셀렉트 옵션 css*/
+.content_title option {
+  border: none;
+  font-weight: bold;
+}
+
+.content_subscript {
+  padding: 15px 10px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #d6dee4;
+}
+
+.content_subscript p:first-child {
+  padding-bottom: 5px;
+}
+
+/*학습자료 학생/학년 필터*/
+.content_filter {
+  background-color: #f0f1f3;
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.content_filter .filter {
+  margin: 10px 0;
+}
+
+.content_filter span[value="student"] {
+  font-weight: bold;
+}
+
+.content_filter ul {
+  display: inline-block;
+}
+
+.content_filter li {
+  float: left;
+  border-right: 1px solid gray;
+  padding: 0 10px;
+}
+
+.content_filter li:first-child {
+  padding-left: 0;
+}
+
+.content_filter li:last-child {
+  border: none;
+}
+
+.content_filter li a {
+  font-size: smaller;
+}
+
+/*학습자료 게시글 제목 리스트*/
+
+.border_content_list {
+  margin-top: 20px;
+}
+
+.border_content_list table {
+  width: 100%;
+  overflow: hidden;
+}
+
+.border_content_list th {
+  padding: 10px;
+  border-bottom: 1px solid #d6dee4;
+}
+
+.border_content_list td {
+  padding: 10px 5px;
+  border-bottom: 1px solid #d6dee4;
+  text-align: center;
+}
+
+.border_content_list tr:last-child td {
+  border: none;
+}
+
+.border_content_list td a:hover {
+  text-decoration: underline;
+}
+
+.border_content_list tr:hover {
+  background-color: #f0f1f3;
+}
+
+.border_content_list tr:first-child:hover {
+  background-color: transparent;
+}
+
+.border_content_list td[value="list_title"] {
+  text-align: left;
+}
+
+/*컨텐츠 버튼*/
+.content_btn_wrap {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 10px;
+  gap: 0 10px;
+}
+
+.content_btn_wrap .content_btn {
+  padding: 1% 2.5%;
+}
+
+/*------------------------------------------*/
+
+/*작성글 뷰어 영역*/
+
+/*작성자 아이콘, 닉네임*/
+.content_nickbox {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/*작성자 닉네임*/
+.content_nickbox span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/*작성자 아이콘*/
+.content_icon {
+  width: 20px;
+  height: 20px;
+  background: url("../img/profile.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #d6dee4;
+  display: inline-block; /*이미지가 보이게*/
+}
+
+.content_info {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+/*작성글 날짜*/
+.content_date {
+  margin: 5px 0;
+  text-align: right;
+}
+
+/*작성글 조회수, 추천, 댓글*/
+.content_fr li {
+  float: left;
+  border-right: 1px solid black;
+  margin-right: 5px;
+}
+
+.content_fr li:last-child {
+  border: none;
+  margin: 0;
+}
+
+.content_fr li span {
+  padding-right: 5px;
+  font-size: smaller;
+}
+
+/*게시글 내용*/
+.content_body {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*게시글 첨부파일*/
+.attached_file {
+  margin: 10px 0;
+}
+
+.attached_file a {
+  text-decoration: underline;
+  margin: 10px 0;
+}
+
+.attached_file a:hover {
+  color: #f87b7b;
+}
+
+/*게시글 첨부 이미지*/
+.attached_img img {
+  max-width: 100%;
+  cursor: pointer;
+  display: block;
+  margin: 10px 0;
+}
+
+.content_body p {
+  text-align: left;
+}
+
+/*추천 아이콘*/
+
+.content_function_icon {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.recommend_icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f87b7b;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.recommend_icon i,
+.recommend_icon p {
+  color: #fff;
+  position: absolute;
+}
+
+.recommend_icon i {
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recommend_icon p {
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content_function_btn {
+  text-align: right;
+}
+
+.content_function_btn button {
+  border: 1px solid #d6dee4;
+  background-color: #fff;
+  padding: 0.5% 1%;
+  margin-left: 5px;
+  font-size: smaller;
+}
+
+/*게시글 댓글 영역*/
+#comment_wrap {
+  border: 1px solid #d6dee4;
+  width: 100%;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+/*코멘트 아이콘, 닉네임*/
+.comment_nickbox {
+  display: flex;
+  align-items: center;
+}
+
+/*코멘트 닉네임*/
+.comment_nickbox span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/*코멘트 아이콘*/
+.comment_icon {
+  width: 20px;
+  height: 20px;
+  background: url("../img/profile.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #d6dee4;
+  display: inline-block; /*이미지가 보이게*/
+}
+
+/*코멘트 덩어리 한개 밑줄 처리*/
+#comment_wrap .comment_li {
+  border-top: 1px solid #d6dee4;
+  position: relative;
+  padding: 10px 0;
+}
+
+#comment_wrap .comment_li:first-child {
+  border: none;
+}
+
+/*코멘트 내용*/
+#comment_wrap .comment_li > p {
+  margin-left: 25px;
+  margin-top: 10px;
+  white-space: normal;
+  /*줄바꿈처리*/
+  line-height: 1.2em;
+}
+
+/*리코멘트 내용*/
+
+#comment_wrap .reply_li > p {
+  margin-left: 60px;
+}
+
+/*코멘트 버튼*/
+.comment_btn_wrap {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.comment_btn {
+  background-color: #fff;
+  font-size: smaller;
+  border: 1px solid #d6dee4;
+}
+
+.comment_btn:hover {
+  background-color: #dddddd;
+}
+
+/*리코멘트 토글*/
+#reply_wrap {
+  width: 100%;
+  height: 80px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+/*리코멘트 작성영역*/
+#reply_wrap textarea {
+  width: 80%;
+  height: 100%;
+  vertical-align: top;
+  text-align: left;
+  padding: 10px;
+  overflow: hidden; /*스크롤바 제거*/
+  resize: none; /*크기 조절 방지*/
+  border: 1px solid #d6dee4;
+  margin-left: 3%;
+}
+
+#reply_wrap button {
+  width: 15%;
+  height: 100%;
+  border-color: #ff9292;
+  padding: 0;
+  margin: 0;
+}
+
+.reply_icon {
+  transform: scale(-1, -1);
+  margin: 0 10px;
+}
+
+/*코멘트 작성 영역*/
+#comment_write_wrap {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-top: 30px;
+  display: flex;
+}
+
+#comment_write_wrap textarea {
+  width: 85%;
+  height: 100%;
+  vertical-align: top;
+  text-align: left;
+  padding: 10px;
+  overflow: hidden; /*스크롤바 제거*/
+  resize: none; /*크기 조절 방지*/
+  border: 1px solid #d6dee4;
+}
+
+#comment_write_wrap button {
+  width: 15%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #ff9292;
+  color: #fff;
+}
+
+#comment_write_wrap button:hover {
+  background-color: #f87b7b;
+}
+
+/***********crawling_style 크롤링 스타일************/
+
+.crawling_style {
+  margin-top: 50px;
+}
+
+/**************************************************/
+/*학습장터*/
+
+/*보기 방식, 검색창 정렬*/
+.content_view_query {
+  display: flex;
+  align-items: center;
+  gap: 0 7px;
+  float: right;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.content_view {
+  display: flex;
+  text-align: center;
+}
+
+/*보기 방식, 검색창 버튼 스타일*/
+.content_view button {
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+}
+
+.content_view button:hover {
+  background-color: #ff9292;
+}
+
+.content_query button:hover {
+  background-color: #ddd;
+}
+
+.content_view button:first-child {
+  border-right: 1px solid #d6dee4;
+}
+
+.content_view i {
+  color: black;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.content_view i:hover {
+  color: #fff;
+}
+
+/*컨텐츠 내 검색창*/
+.content_query {
+  display: flex;
+}
+
+.content_query input[type="text"] {
+  height: 30px;
+  line-height: 50%;
+  padding: 5px;
+  border-radius: 0;
+  border: 1px solid #dddddd;
+  font-size: smaller;
+}
+
+.content_query button {
+  border: 1px solid #dddddd;
+  border-left: 0;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+/*학습장터 제품 정렬 스타일*/
+#shop_wrap ul {
+  width: 100%;
+  padding: 25px 20px 20px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px 0;
+}
+
+#shop_wrap ul li {
+  width: 25%;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/*학습장터 제품 묶음 a태그*/
+.item_link {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /*세로 정렬*/
+  justify-content: center;
+  align-items: center;
+  gap: 15px 0;
+  overflow: hidden;
+}
+
+/*학습장터 이미지 담는 박스*/
+.item_img_box {
+  background-color: #f0f1f3;
+  border: 1px solid #d6dee4;
+  border-radius: 7px;
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  transition: transform 0.2s;
+}
+
+/*학습장터 이미지*/
+.item_img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  display: block; /*이미지가 보이게*/
+
+  transition: transform 0.3s;
+}
+
+/*마우스 오버 이미지 확대*/
+.item_img:hover {
+  transform: scale(1.2);
+}
+
+.item_inf {
+  text-align: center;
+}
+
+.item_price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*하이퍼 카테고리(사이드)*/
+/*최근 본 상품*/
+#hyper_category,
+#rct_viewed_items {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+/*하이퍼 카테고리 상단*/
+.category_title,
+.hyper_link,
+.rct_title {
+  width: 100%;
+  height: 15%;
+  padding: 10px 0;
+  /* border: 1px solid #d6dee4; */
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/*하이퍼 카테고리 하단 링크*/
+.hyper_link {
+  width: 100%;
+  height: 15%;
+  cursor: pointer;
+  background-color: #f0f1f3;
+  border-top: 1px solid #d6dee4;
+}
+
+#hyper_category i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #d6dee4;
+}
+
+/*하이퍼 카테고리 박스*/
+.category_ul {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  flex-flow: row wrap;
+}
+
+.category_li {
+  width: 50%;
+  height: 50%;
+  display: block;
+  border-top: 1px solid #d6dee4;
+  padding: 11% 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.category_li:nth-child(2n) {
+  border-left: 1px solid #d6dee4;
+}
+
+.category_li:hover,
+.hyper_link:hover {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+/*최근 본 상품*/
+.rct_title {
+  border-bottom: 1px solid #d6dee4;
+}
+
+.rct_item_ul {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 9px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.rct_item_li {
+  width: 31%;
+  background-color: #f0f1f3;
+  border: 1px solid #d6dee4;
+  border-radius: 7px;
+}
+
+/*학습장터 이미지*/
+.rct_item_li img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  display: block; /*이미지가 보이게*/
+  transition: transform 0.3s;
+}
+
+/*마우스 오버 이미지 확대*/
+.rct_item_li img:hover {
+  transform: scale(1.1);
+}
+
+.quick_side {
+  width: 298px;
+  background-color: #fff;
+  position: absolute;
+}
